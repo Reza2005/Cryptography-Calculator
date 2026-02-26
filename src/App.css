@@ -14,6 +14,11 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
 label {
   display: block;
   margin-top: 10px;
@@ -43,6 +48,46 @@ button:hover {
   background: #0056b3;
 }
 
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.actions button {
+  margin-top: 0;
+}
+
+.secondary {
+  background: #e9ecef;
+  color: #222;
+}
+
+.secondary:hover {
+  background: #dce1e6;
+}
+
+.hint {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: left;
+}
+
+.enigma-settings {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
 #output {
   margin-top: 20px;
   border: 1px solid #ccc;
@@ -53,4 +98,19 @@ button:hover {
 .error {
   color: #d9363e;
   margin: 0;
+}
+
+.key-error {
+  margin-top: 6px;
+}
+
+.info {
+  color: #0a7a2f;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    grid-template-columns: 1fr;
+  }
 }
